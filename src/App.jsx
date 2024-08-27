@@ -12,12 +12,14 @@ function App() {
 
   return (
     <>
-      <DogFetch />
-      <CatAxios />
-      {/* <NavBar />
+      {/* <CatAxios />
+      <DogFetch /> */}
+
+      <NavBar />
       <Form />
-      <Home /> */}
-      {/* {toggle && <LifeCycle />} */}
+      <Home />
+
+      {/* {toggle && <LifeCycle />}
       
       {/* <button onClick={() => setToggle(!toggle)}>{toggle ? 'Desmontar' : 'Montar'}</button> */}
     </>
