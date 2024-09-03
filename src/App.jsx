@@ -1,27 +1,28 @@
 import "./styles/App.css";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import { routes } from "./utils/rutes";
 import NavBar from "./components/NavBar";
-import Form from "./components/Form";
-import LifeCycle from "./components/LifeCycle";
-import { useState } from "react";
-import DogFetch from "./components/DogFetch";
-import CatAxios from "./components/CatAxios";
+import Detail from "./pages/Detail";
 
 function App() {
   //const [toggle, setToggle] = useState(true);
 
   return (
     <>
-      {/* <CatAxios />
-      <DogFetch /> */}
-
       <NavBar />
-      <Form />
-      <Home />
-
-      {/* {toggle && <LifeCycle />}
-      
-      {/* <button onClick={() => setToggle(!toggle)}>{toggle ? 'Desmontar' : 'Montar'}</button> */}
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.contact} element={<Contact />} />
+        <Route path={routes.cart} element={<Cart />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route
+          path={routes.notFound}
+          element={<h1>Error 404: Page not found</h1>}
+        />
+      </Routes>
     </>
   );
 }
