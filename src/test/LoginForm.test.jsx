@@ -15,7 +15,7 @@ describe("Testing LoginForm Componente", () => {
     expect(email).toBeVisible(); //Verificamos si esta visible
   });
 
-  test("Should chabge second input", () => {
+  test("Should change second input", () => {
     render(<LoginForm />);
     const pass = screen.getByTestId("password"); //Obtenemos el input de password
     fireEvent.change(pass, { target: { value: "password123" } }); //Modificamos el input
