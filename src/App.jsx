@@ -16,12 +16,12 @@ function App() {
   return (
     <>
       {/* Envolvemos dentro de Context los componente que queremos que reciban la info de Context */}
-      <Context>
+      {/* <Context>
         <ParentComponent />
         <Lobo />
-      </Context>
+      </Context> */}
 
-      {/* <NavBar />
+      <NavBar />
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.contact} element={<Contact />} />
@@ -31,7 +31,7 @@ function App() {
           path={routes.notFound}
           element={<h1>Error 404: Page not found</h1>}
         />
-      </Routes> */}
+      </Routes>
     </>
   );
 }
