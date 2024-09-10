@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { useRecipeStates } from "../context/Context";
 
 const Card = ({ recipe }) => {
-  const { setCart } = useRecipeStates();
+  const { dispatch } = useRecipeStates();
   return (
     <div className={CardStyles.cardContainer}>
       <img src={recipe.image} className={CardStyles.cardImg} />
       <h3>{recipe.title}</h3>
       <h4>${recipe.pricePerServing}</h4>
       <Contador />
-      <Button onClick={() => setCart((prevState) => [...prevState, recipe])}>
+      <Button onClick={() => dispatch({ type: "ADD_CART", payload: recipe })}>
         🛒
       </Button>
       <Link to={"detail/" + recipe.id}>
