@@ -9,6 +9,7 @@ import Detail from "./pages/Detail";
 import ParentComponent from "./clase13/ParentComponent";
 import Lobo from "./clase13/Lobo";
 import Context from "./clase13/Context";
+import ReducerCount from "./components/ReducerCount";
 
 function App() {
   //const [toggle, setToggle] = useState(true);
@@ -21,7 +22,9 @@ function App() {
         <Lobo />
       </Context> */}
 
-      <NavBar />
+      <ReducerCount />
+
+      {/* <NavBar />
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.contact} element={<Contact />} />
@@ -31,7 +34,7 @@ function App() {
           path={routes.notFound}
           element={<h1>Error 404: Page not found</h1>}
         />
-      </Routes>
+      </Routes> */}
     </>
   );
 }
